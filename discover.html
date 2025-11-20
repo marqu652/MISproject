@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Discover page-specific styles */
+        .discover-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .video-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 0 auto 3rem auto;
+            max-width: 1000px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .discover-intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .discover-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        .discover-intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0.5rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .content-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .content-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .content-text strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .content-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .content-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .discover-intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .discover-intro p {
+                font-size: 1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .video-section {
+                padding: 2rem 1rem;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="discover.html" class="active">Discover</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="career.html">Career Interests</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <div class="discover-container">
+        <h1 class="page-title">Discover Duluth</h1>
+
+        <!-- UMD Marketing Video -->
+        <div class="video-section">
+            <h2 class="video-title">University of Minnesota, Duluth</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/W8lg8bApw6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="discover-intro">
+            <h2>Why Duluth?</h2>
+            <p>Duluth has so many amazing things to discover.</p>
+        </div>
+
+        <!-- Content Grid with Text and Image -->
+        <div class="content-grid">
+            <div class="content-text">
+                <p><strong>Campus Life:</strong> Campus life is pretty cool, with a lot of nice spots on campus to hangout or do homework. The classes are usually good, and Duluth has a good Computer Science program.</p>
+                
+                <p><strong>Food Scene:</strong> There's so much good food to find in a city like Duluth. One of my favorite places is Northern Waters Smokehaus.</p>
+                
+                <p><strong>Nature & Hiking:</strong> In Duluth, there is an abundance of nature. One of my favorite spots to hike is Rock Knob (about a 20-minute hike from campus).</p>
+            </div>
+            
+            <div class="content-image">
+                <img src="media/RockKnobSunriseStick.jpg" alt="Rock Knob Sunrise">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

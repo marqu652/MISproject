@@ -1,0 +1,8 @@
+Front Side: What is my favorite sport? ; Back Side: Baseball
+Front: What instrument did I play in middle/high school? ; Back: Percussion
+Front: Cake or Ice Cream? ; Back: Cake
+Front: Am I a country boy or a city boy? ; Back: Country Boy
+Front: Favorite Quote? ; Back: "The world offers you comfort. But, you were not made for comfort. You were made for greatness." - Pope Benedict XVI
+Front: Favorite Author? ; Back: Fyodor Dostoevsky
+Front: Dog or Cat person? ; Back: Dog
+Front: Apple or Android: ; Back: Android

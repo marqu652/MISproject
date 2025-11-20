@@ -1,0 +1,91 @@
+/* Print styles for resume */
+@page {
+    margin: 1in;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+}
+
+.nav-bar, .download-button, h1 {
+    display: none;
+}
+
+.content-box {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    animation: none;
+    background: white;
+    max-width: none;
+    border: none;
+}
+
+.resume-section {
+    margin: 1em 0;
+    padding: 0.5em 0;
+    page-break-inside: avoid;
+    background: white;
+    border: none;
+    box-shadow: none;
+}
+
+h1, h2, h3 {
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+}
+
+h2 {
+    font-size: 14pt;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 12pt;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.work-history {
+    margin: 0;
+    padding: 0;
+}
+
+.job-entry {
+    margin-bottom: 1em;
+    border: none;
+}
+
+.date {
+    font-style: italic;
+    margin: 0.2em 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+li {
+    margin-bottom: 0.3em;
+}
+
+@media print {
+    .resume-section {
+        break-inside: avoid;
+    }
+}

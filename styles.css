@@ -1,0 +1,221 @@
+/* Common styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    background-color: #E8E4C9;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar a {
+    color: #1E90FF;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    background-color: #D8D4B9;
+}
+
+.nav-bar a.active {
+    background-color: #D8D4B9;
+}
+
+/* Content box styles */
+.content-box {
+    background: #E8E4C9;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D8D4B9;
+    margin: 2rem auto;
+    max-width: 800px;
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+    }
+    50% {
+        transform: translateZ(40px) rotateX(-5deg) rotateY(-5deg);
+    }
+}
+
+h1 {
+    color: #1E90FF;
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Resume styles */
+.resume-section {
+    background: #F5F5DC;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E8E4C9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.resume-section h2 {
+    color: #1E90FF;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 1rem;
+}
+
+.work-history {
+    background: #F5F5DC;
+    padding: 1.2rem;
+}
+
+.job-entry {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #E8E4C9;
+}
+
+.job-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.job-entry h3 {
+    color: #1E90FF;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.job-entry .date {
+    margin: 0.2rem 0;
+}
+
+.job-entry p:not(.date) {
+    margin-top: 0.3rem;
+}
+
+/* If you intended to style another class, add the selector here, e.g.:
+.job-box {
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid rgba(30, 144, 255, 0.2);
+}
+*/
+
+
+.job-box h3 {
+    color: #1E90FF;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.date {
+    color: #666;
+    font-style: italic;
+    margin: 0.3rem 0;
+}
+
+.resume-section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: none;
+}
+
+.resume-section ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.resume-section ul li:before {
+    content: "•";
+    color: #1E90FF;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Page links styles */
+.page-links {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link-card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.link-card h2 a {
+    color: #1E90FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-card h2 a:hover {
+    color: #1570CD;
+}
+
+.link-card p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}

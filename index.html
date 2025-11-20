@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Marquette - Computer Science Major at UMD</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Homepage-specific styles */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-top: 1rem;
+            opacity: 0.95;
+        }
+
+        .academic-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            backdrop-filter: blur(10px);
+            display: inline-block;
+        }
+
+        .academic-info p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .gallery-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-caption {
+            padding: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .gallery-item-caption h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 0.8rem 0;
+            color: #667eea;
+        }
+
+        .gallery-item-caption p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .video-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 0 auto 2rem auto;
+            max-width: 1000px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .gallery-title {
+                font-size: 1.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="active">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="discover.html">Discover</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="career.html">Career Interests</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Welcome to my website!</h1>
+        <p>Hello! My name is <strong>Samuel Marquette</strong>.</p>
+        <div class="academic-info">
+            <p><strong>Computer Science Major</strong> at University of Minnesota, Duluth</p>
+            <p>Minors in Computer Engineering & Management Information Systems</p>
+        </div>
+        <p class="tagline">Passionate about technology, innovation, and creating impactful solutions</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h3>Education</h3>
+            <p>Studying Computer Science with minors in Computer Engineering and Management Information Systems at UMD</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Technology</h3>
+            <p>Interested in software development, web design, database management and design, and innovative tech solutions</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Projects</h3>
+            <p>Building games and interactive applications to enhance user experiences</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <h2 class="gallery-title">Moments & Memories</h2>
+
+        <!-- Video Section (moved up and made larger) -->
+        <div class="video-section" style="margin-bottom: 3rem;">
+            <h3 class="video-title">Let me Introduce Myself!</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JYC2GD1SZPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Images Grid with detailed captions -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="media/PurpleSuitOnTheDeck.jpg" alt="Purple Suit On The Deck">
+                <div class="gallery-item-caption">
+                    <p>I grew up in central Minnesota, in the heart of Minnesotan farmland. The most important things to me are my faith, my family, and my friends.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="media/SunriseOnCampus.jpg" alt="Sunrise On Campus">
+                <div class="gallery-item-caption">
+                    <p>The Duluth area has a lot of positives. Some of my favorites are the beautiful sunrises, and numerous parks to explore.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="media/MeAtPaulJKim.jpeg" alt="At Paul J. Kim">
+                <div class="gallery-item-caption">
+                    <p>The geography, people, and academic rigor of UMD made it the perfect choice for me in my pursuit of higher education.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section">
+        <h2>Explore My Work</h2>
+        <p>Discover my projects, hobbies, interests, and more</p>
+        <div class="cta-buttons">
+            <a href="portfolio.html" class="cta-button">View Portfolio</a>
+            <a href="hobbies.html" class="cta-button">My Hobbies</a>
+            <a href="career.html" class="cta-button">Career Interests</a>
+            <a href="game.html" class="cta-button">Play Blackjack</a>
+        </div>
+    </div>
+
+</body>
+</html>

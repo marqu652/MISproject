@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hobbies page-specific styles */
+        .hobbies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0.5rem 0;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .hobby-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hobby-card-content {
+            padding: 1.5rem;
+        }
+
+        .hobby-card-content p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .flashcards-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .flashcards-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .flashcards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .flashcard {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-content {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.6;
+            backface-visibility: hidden;
+        }
+
+        .flashcard-front {
+            backface-visibility: hidden;
+        }
+
+        .flashcard-back {
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+        }
+
+        .flashcard-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .flashcard-button {
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .flashcard-button:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .flashcard-button:active {
+            transform: scale(0.95);
+        }
+
+        .card-counter {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flashcard {
+                width: 250px;
+                height: 150px;
+            }
+
+            .flashcard-content {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="hobbies.html" class="active">Hobbies</a>
+        <a href="discover.html">Discover</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="career.html">Career Interests</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <div class="hobbies-container">
+        <h1 class="page-title">My Hobbies & Interests</h1>
+
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <p><strong>One of the best things about being a Student is flexibility with schedules.</strong></p>
+            <p>In my free time, I love to lead Bible Studies, hang out with friends, and volunteer at the Newman Center.</p>
+            <p>Beyond that, I love exploring Duluth and the parks in the area, playing video games, reading, and writing.</p>
+        </div>
+
+        <!-- Hobbies Grid -->
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <img src="media/gardensupper.jpg" alt="Garden Supper">
+                <div class="hobby-card-content">
+                    <p>One of my favorite things to do, whether at home or in my apartment, is to cook delicious meals. I love picking things fresh from the garden and starting to cook without a plan.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="media/discgolf.jpg" alt="Disc Golf">
+                <div class="hobby-card-content">
+                    <p>When the weather is nice, I love going disc golfing or playing Ultimate Frisbee with my friends.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="media/rockjumping.jpg" alt="Rock Jumping">
+                <div class="hobby-card-content">
+                    <p>I love exploring the parks around Duluth, and especially love going rock jumping. I do not, however, enjoy falling in.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flashcards Section -->
+        <div class="flashcards-section">
+            <h2 class="flashcards-title">Fun Facts About Me</h2>
+            <div class="card-counter">
+                <span id="current-card">1</span> / <span id="total-cards">8</span>
+            </div>
+
+            <div class="flashcards-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-front">
+                        <div class="flashcard-content" id="card-front">Click to reveal</div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="flashcard-content" id="card-back">Answer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flashcard-controls">
+                <button class="flashcard-button" id="prev-button">← Previous</button>
+                <button class="flashcard-button" id="flip-button">Flip Card</button>
+                <button class="flashcard-button" id="next-button">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Flashcard data
+        const flashcards = [
+            {
+                front: "What is my favorite sport?",
+                back: "Baseball"
+            },
+            {
+                front: "What instrument did I play in middle/high school?",
+                back: "Percussion"
+            },
+            {
+                front: "Cake or Ice Cream?",
+                back: "Cake"
+            },
+            {
+                front: "Am I a country boy or a city boy?",
+                back: "Country Boy"
+            },
+            {
+                front: "Favorite Quote?",
+                back: "\"The world offers you comfort. But, you were not made for comfort. You were made for greatness.\" - Pope Benedict XVI"
+            },
+            {
+                front: "Favorite Author?",
+                back: "Fyodor Dostoevsky"
+            },
+            {
+                front: "Dog or Cat person?",
+                back: "Dog"
+            },
+            {
+                front: "Apple or Android?",
+                back: "Android"
+            }
+        ];
+
+        let currentCardIndex = 0;
+        let isFlipped = false;
+
+        const flashcardEl = document.getElementById('flashcard');
+        const frontEl = document.getElementById('card-front');
+        const backEl = document.getElementById('card-back');
+        const currentCardEl = document.getElementById('current-card');
+        const totalCardsEl = document.getElementById('total-cards');
+        const flipButton = document.getElementById('flip-button');
+        const nextButton = document.getElementById('next-button');
+        const prevButton = document.getElementById('prev-button');
+
+        totalCardsEl.textContent = flashcards.length;
+
+        function updateCard() {
+            const card = flashcards[currentCardIndex];
+            frontEl.textContent = card.front;
+            backEl.textContent = card.back;
+            currentCardEl.textContent = currentCardIndex + 1;
+            isFlipped = false;
+            flashcardEl.classList.remove('flipped');
+        }
+
+        function flipCard() {
+            isFlipped = !isFlipped;
+            flashcardEl.classList.toggle('flipped');
+        }
+
+        function nextCard() {
+            currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+            updateCard();
+        }
+
+        function prevCard() {
+            currentCardIndex = (currentCardIndex - 1 + flashcards.length) % flashcards.length;
+            updateCard();
+        }
+
+        flipButton.addEventListener('click', flipCard);
+        nextButton.addEventListener('click', nextCard);
+        prevButton.addEventListener('click', prevCard);
+
+        // Initialize
+        updateCard();
+    </script>
+</body>
+</html>

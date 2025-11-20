@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print-resume.css" media="print">
+    <style>
+        .download-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .download-button button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .download-button button:hover {
+            background-color: #1570CD;
+        }
+        @media print {
+            .download-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="discover.html">Discover</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="career.html">Career Interests</a>
+        <a href="game.html">Game</a>
+    </nav>
+    <div class="content-box">
+        <h1>Resume</h1>
+        <div class="download-button">
+            <button onclick="window.print()">Download Resume (PDF)</button>
+        </div>
+        
+        <div class="resume-section">
+            <h2 class="header-box">Samuel Marquette</h2>
+            <p class="contact-info">
+                Computer Science Student<br>
+                900 County Road 37 NW Buffalo, MN 55313<br>
+                Samuel_Marquette@hotmail.com<br>
+                763-318-9650
+            </p>
+        </div>
+
+        <div class="resume-section">
+            <h2>Qualifications</h2>
+            <ul>
+                <li>Pursuing Bachelor of Science degree in Computer Science at the University of Minnesota – Duluth.</li>
+                <li>Proficiency in Microsoft Office as I have used the suite for academic, personal, and previous professional use.</li>
+                <li>Strong public speaking skills, I have taken multiple college-level public speaking courses and frequently speak when volunteering at my church.</li>
+                <li>I have experience in leadership roles, serving on my church's core team in high school, voted captain of my baseball team as a junior in high school, and currently serve on the leadership team for my Newman center. I also volunteered as a teacher for religious education.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section">
+            <h2>Work Experience</h2>
+            <div class="work-history">
+                <div class="job-entry">
+                    <h3>Landscape Structures</h3>
+                    <p class="date">2025</p>
+                    <p>General laborer, worked in kitting, assembling and palletizing orders. Learned prioritization under pressure. Had to familiarize myself with new software.</p>
+                </div>
+                <div class="job-entry">
+                    <h3>Menards</h3>
+                    <p class="date">2024</p>
+                    <p>Worked as a floor salesperson/stocker. Worked with a diverse team to manage retail items in my department, adjust and design floor plans, and assist customers in finding products.</p>
+                </div>
+                <div class="job-entry">
+                    <h3>Laser Etch Technologies</h3>
+                    <p class="date">2021</p>
+                    <p>Worked in a laser-etching shop fulfilling customer orders, operated laser-etching machines, handling materials, packaging, and shop cleanup. Often required to work independently.</p>
+                </div>
+                <div class="job-entry">
+                    <h3>T & R Meat Processing</h3>
+                    <p class="date">2019-2023 (Seasonal/Part-Time)</p>
+                    <p>Worked in an ever-changing environment doing various tasks including customer service, office work, packaging, order processing, and cleanup. Had to learn to adapt and work on my feet. I learned teamwork with coworkers and the ability to balance multiple tasks at a time.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Relevant Education</h2>
+            <ul>
+                <li>Pursuing a B.S. In Computer Science at University of Minnesota Duluth</li>
+                <li>Pursuing Minors in Computer Engineering and Management Information Systems.</li>
+                <li>High School Diploma from Maple Lake Secondary School.</li>
+                <li>Presidential award for Academic Excellence.</li>
+                <li>Multiple Computer Science Classes including Computer Organization and Architecture, Software Analysis and Design, and more.</li>
+                <li>Learned programming in C++ and Java.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section">
+            <h2>Additional Information</h2>
+            <ul>
+                <li>I've been involved in several different activities throughout my middle and high school years including 4-H, boy scouts, band, core team for my church, and baseball.</li>
+                <li>I volunteer frequently, especially at events for my church.</li>
+                <li>I have a diverse collection of work experience with different kinds of people that has taught me how to work professionally with anyone.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
